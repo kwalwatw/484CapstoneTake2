@@ -1,12 +1,10 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LoadDock</title>
+    <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -18,6 +16,5 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-    <!-- jQuery and Bootstrap links - do not delete! -->
 </body>
 </html>
