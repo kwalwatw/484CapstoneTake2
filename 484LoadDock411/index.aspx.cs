@@ -35,10 +35,12 @@ public partial class index : System.Web.UI.Page
         if (!pass.Equals(passconfirm))
         {
             checkpass = false;
+            ErrorMessage.Visible = true;
         }
 
         if (checkpass && checkFields())
         {
+            ErrorMessage.Visible = false;
             Driver driv = new Driver(first, last, email, phone, handle, truckComp, pass, lastUpdated, lastUpdatedBy);
 
             SqlCommand insert = new SqlCommand();

@@ -67,6 +67,8 @@
     <asp:TextBox ID="passwordBox2" runat="server" CssClass="form-control" placeholder="Confirm Password" MaxLength="30"></asp:TextBox>
       
       <asp:Button ID="SignUpButton" runat="server" Text="Sign-Up" CssClass="input-heading btn" style="margin-top:10px;" OnClick="SignUpClick" /> 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <asp:Label ID="ErrorMessage" runat="server" Text="Passwords do not match. Please try again." Visible="False"></asp:Label>
   </div>    
 </div> <!-- end column -->   
 </div> <!-- end row -->
