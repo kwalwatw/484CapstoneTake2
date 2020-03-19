@@ -1,5 +1,4 @@
-﻿@charset "UTF-8";
-
+﻿/*Custom CSS for pages*/
 body {
     background-color: #F2E0C9;
 }
@@ -94,4 +93,9 @@ a, .btn {
     font-weight: 500;
     font-size: 28px;
     font-style: normal;
+}
+
+.validation {
+    font-size: 10px;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

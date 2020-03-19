@@ -11,4 +11,12 @@ public partial class index : System.Web.UI.Page
     {
 
     }
+
+
+
+    protected void SignUpClick(object sender, EventArgs e)
+    {
+
+
+    }
 }
