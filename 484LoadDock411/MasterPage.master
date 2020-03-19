@@ -5,6 +5,8 @@
 <html>
 <head runat="server">
     <meta charset="UTF-8">
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
+<link href="Content/custom.css" rel="stylesheet" type="text/css" media="screen">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LoadDock</title>
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -19,5 +21,10 @@
     </div>
     </form>
     <!-- jQuery and Bootstrap links - do not delete! -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- end of do not delete -->
 </body>
 </html>

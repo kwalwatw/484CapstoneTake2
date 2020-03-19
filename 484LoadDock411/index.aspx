@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="MasterPage.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
-<link href="Content/custom.css" rel="stylesheet" type="text/css" media="screen">
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -58,6 +56,7 @@
     <asp:Label ID="password" runat="server" Text="Password"></asp:Label>
     &nbsp;&nbsp;&nbsp;
       <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="passwordBox" CssClass="validation" ErrorMessage="Please enter a password." ForeColor="Red"></asp:RequiredFieldValidator>
+    &nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="passwordBox" runat="server" CssClass="form-control" placeholder="CB Handle" MaxLength="30"></asp:TextBox>
   </div>
 
@@ -71,9 +70,4 @@
   </div>    
 </div> <!-- end column -->   
 </div> <!-- end row -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<!-- end of do not delete -->
 </asp:Content>

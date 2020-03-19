@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.SqlClient;
+using System.Web.Configuration;
 
 public class Driver
 {
+    SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
+
     private String firstName;
     private String lastName;
     private String email;
@@ -13,8 +17,10 @@ public class Driver
     private String username;
     private String truckingCompany;
     private String password;
+    private DateTime lastUpdatedTime;
+    private String lastUpdatedBy;
 
-    public Driver(String firstName, String lastName, String email, String phone, String CBHandle, String truckingCompany, String password)
+    public Driver(String firstName, String lastName, String email, String phone, String CBHandle, String truckingCompany, String password, DateTime lastupdated, String lastUpdatedBy)
     {
         setfirstName(firstName);
         setLastName(lastName);
@@ -24,6 +30,18 @@ public class Driver
         setUserName(CBHandle);
         setTruckingCompany(truckingCompany);
         setPassword(password);
+        setlastUpdated(lastupdated);
+        setlastUpdatedBy(lastUpdatedBy);
+    }
+
+    protected void setlastUpdated(DateTime lastUpdated)
+    {
+        this.lastUpdatedTime = lastUpdated;
+    }
+
+    protected void setlastUpdatedBy(String lastUpdatedBy)
+    {
+        this.lastUpdatedBy = lastUpdatedBy;
     }
 
     protected void setfirstName(String first)
@@ -53,7 +71,34 @@ public class Driver
 
     protected void setUserName(String CB)
     {
+        int inc = 0;
+            SqlCommand select = new SqlCommand();
+            select.CommandText = "select driverUsername from [user]";
+            select.Connection = sc;
+        sc.Open();
+            SqlDataReader read = select.ExecuteReader();
+        while (read.Read())
+        {
+           if(read.GetString(0).Equals(CB))
+           {
+                CB = CB + inc;
+
+           }
+           if(read.GetString(0).Equals(CB))
+            {
+                inc++;
+                CB = CB + inc;
+            }
+        }
+        sc.Close();
+
+        this.username = CB;
         //check all other usernames. If CB handle is available as username, then set to that. If not, increment to CBHandle#. (CODE COMING SOON)
+    }
+
+    protected void doubleCheck(String CB)
+    {
+
     }
 
     protected void setTruckingCompany(String truck)
@@ -66,44 +111,55 @@ public class Driver
         this.password = password;
     }
 
-    protected String getFirstName()
+    public String getFirstName()
     {
         return this.firstName;
     }
 
-    protected String getLastName()
+    public String getLastName()
     {
         return this.lastName;
     }
 
-    protected String getEmail()
+    public String getEmail()
     {
         return this.email;
     }
 
-    protected String getPhone()
+    public String getPhone()
     {
         return this.phone;
     }
 
-    protected String getCBHandle()
+    public String getCBHandle()
     {
         return this.CBHandle;
     }
 
-    protected String getUserName()
+    public String getUserName()
     {
         return this.username;
     }
 
-    protected String getPassword()
+    public String getPassword()
     {
         return this.password;
     }
 
-    protected String getTruckingCompany()
+    public String getTruckingCompany()
     {
         return this.truckingCompany;
     }
+
+    public DateTime getLastUpdated()
+    {
+        return this.lastUpdatedTime;
+    }
+
+    public String getLastUpdatedBy()
+    {
+        return this.lastUpdatedBy;
+    }
+    
 
 }
