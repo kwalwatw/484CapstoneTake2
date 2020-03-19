@@ -1,0 +1,97 @@
+﻿@charset "UTF-8";
+
+body {
+    background-color: #F2E0C9;
+}
+
+.container-fluid {
+    max-width: 720px;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    display: block;
+}
+
+.form-group {
+    max-width: 60%;
+    vertical-align: center;
+}
+
+.img-fluid {
+    max-width: 10em;
+}
+
+.truckerindex-header {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 40px;
+}
+
+.location-color {
+    background-color: #ffffff;
+    border: 4px solid #A66963;
+    margin: 25px;
+}
+
+.amenities-graphics {
+    max-height: 15%;
+    max-width: 15%;
+}
+
+.input-heading {
+    font-family: neue-haas-unica,sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: normal;
+}
+
+.where-to, .location-summary {
+    font-family: neue-haas-unica,sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    font-style: normal;
+}
+
+.indent {
+    text-indent: 10px;
+}
+
+.subheads {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+}
+
+.fontReviews {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+}
+
+.review-disclaimer {
+    font-family: "Helvetica Neue Light", "Helvetica Neue";
+    font-size: 12px;
+}
+
+a, .btn {
+    background-color: #1A773C;
+    color: #ffffff;
+    border: none;
+}
+
+    a:hover {
+        background-color: #1E261F;
+        color: #ffffff;
+    }
+
+.trucker-display {
+    margin-top: 30px;
+    font-family: neue-haas-unica,sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    font-style: normal;
+}
