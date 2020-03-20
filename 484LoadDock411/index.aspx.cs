@@ -13,7 +13,7 @@ public partial class index : System.Web.UI.Page
     SqlConnection sc = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
-        Hello
+
     }
 
 
